@@ -1,0 +1,7 @@
+<p>
+  Name of product <strong>{{ product?.pName}}</strong>
+</p>
+<p>
+  Id of the product is <strong>{{ product?.pid}}</strong> and the status is : <strong>{{product?.pStatus}}</strong>
+</p>
+<button class="btn btn-primary" [routerLink]="['/products', product?.pid, 'Edit']">Edit Product</button>

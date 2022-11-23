@@ -1,0 +1,16 @@
+<div class="row mt-4">
+  <div class="col-sm-4">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let user of users"
+      [class.active]="user.id===activeId"
+      [routerLink]="['/users', user.id]"
+      (click)="activeId=user.id">
+        {{user.userName}}
+      </li>
+    </ul>
+  </div>
+  <div class="col-sm-4">
+    <router-outlet></router-outlet>
+    <!-- <app-user></app-user> -->
+  </div>
+</div>

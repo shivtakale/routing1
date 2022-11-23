@@ -1,0 +1,15 @@
+<div class="form-group">
+  <label for="pName">Product Name</label>
+  <input type="text" name="" id="pName" [value]="product?.pName" class="form-control">
+</div>
+<div class="form-group">
+  <label for="pStatus">Product Status</label>
+  <select name="" id="pStatus" class="form-control" [value]="product?.pStatus">
+    <option value="In process">In process</option>
+    <option value="Dispatched">Dispatched</option>
+    <option value="Shipped">Shipped</option>
+  </select>
+</div>
+<div>
+  <button class="btn btn-primary" routerLink="/editProduct">Update Product</button>
+</div>

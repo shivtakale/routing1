@@ -1,0 +1,18 @@
+<div class="row mt-4">
+  <div class="col-sm-4">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let pro of products"
+      [ngClass]="{'active':pro.pid===activeId}"
+      [routerLink]="['/products', pro?.pid]"
+      (click)="activeId=pro.pid">
+        {{pro.pName}}
+      </li>
+    </ul>
+  </div>
+  <div class="col-sm-6">
+    <router-outlet></router-outlet>
+
+  <!-- <app-edit-product></app-edit-product> -->
+  <!-- <app-product></app-product> -->
+  </div>
+</div>
